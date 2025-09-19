@@ -1,3 +1,33 @@
-<html>
-    
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnado ESO</title>
+</head>
+<body>
+    <?php include 'conexion.php'; ?>
+    <!-- Aquí puedes añadir el contenido del formulario o cualquier otro HTML -->
+    <form action="conexion.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="number" name="edad" required>
+        <br>
+        <input type="radio" name="curso" value="1"> 1º ESO
+        <input type="radio" name="curso" value="2"> 2º ESO
+        <input type="radio" name="curso" value="3"> 3º ESO
+        <input type="radio" name="curso" value="4"> 4º ESO
+        <br>
+        <label for = "email">Email:</label>
+        <input type="email" name="email" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="text" name = "password" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html> 

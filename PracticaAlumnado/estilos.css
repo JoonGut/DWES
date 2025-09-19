@@ -1,0 +1,30 @@
+* {
+    margin: 10 px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+form {
+    background-color: red;
+    display: block;
+    margin: 40px auto; 
+    padding: 20px;  
+    max-width: 500px;     
+    width: 90%;           
+    text-align: center;
+    height: max-content;
+}
+input{
+    margin: 10px;
+    padding: 5px;
+}
+input[type="submit"]{
+    background-color: #8004BE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
