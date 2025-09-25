@@ -13,9 +13,9 @@ $insert = "INSERT INTO alumnado (nombre, apellidos,fecha_nacimiento, curso_matri
 $result = mysqli_query($conexion, $insert);
 
 if($result){
-    echo "<script> alert('Datos insertados correctamente'); window.location='formulario.html' </script>";
+    echo "<script> alert('Datos insertados correctamente'); window.location='formulario.php' </script>";
 } else{
-    echo "<script> alert('No registrado correctamente'); window.location='formulario.html' </script>";
+    echo "<script> alert('No registrado correctamente'); window.location='formulario.php' </script>";
 }
 mysqli_close($conexion);
 ?>

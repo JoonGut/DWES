@@ -24,7 +24,7 @@
         <br>
         <input type="date" name="fch_nacimiento" required >
         <br>
-        <input type="radio" name="curso" value="1"> 1º ESO
+        <input type="radio" name="curso" value="1" checked> 1º ESO
         <input type="radio" name="curso" value="2"> 2º ESO
         <input type="radio" name="curso" value="3"> 3º ESO
         <input type="radio" name="curso" value="4"> 4º ESO
@@ -40,7 +40,7 @@
         <input type="submit" value="Enviar">
     </form>
     <section class="container.tabla">
-        <div class="titulo">Alumnos registrados <br><a href="update.php" class="title_edit">Edicion</a></div>
+        <div class="titulo">Alumnos registrados <br></div>
         <div class="header">Nombre</div>
         <div class="header">Apellido</div>
         <div class="header">Fecha de Nacimiento</div>
@@ -54,6 +54,7 @@
         $resultado= mysqli_query($conexion, $bd_form);
 
         while($row= mysqli_fetch_assoc($resultado)){ ?>
+        <div class="campo_tabla_id"><?php echo $row["id"]; ?></div>
         <div class="campo_tabla"><?php echo $row["nombre"]; ?></div>
         <div class="campo_tabla"><?php echo $row["apellidos"]; ?></div>
         <div class="campo_tabla"><?php echo $row["fecha_nacimiento"]; ?></div>
@@ -62,7 +63,8 @@
         <div class="campo_tabla"><?php echo $row["password"]; ?></div>
         <div class="campo_tabla">
 
-           <a href="eliminar.php?nombre=<?php echo $row['nombre']; ?>">Eliminar</a>
+            <a href="eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</a>
+            <a href="cargar_modif.php?id=<?php echo $row['id'];?>">Editar</a>
             <!--<a href="actualizar.php?id=<*?php echo $row['nombre'];?>" class="campo_tabla">Editar</a>
             <a mehref="eliminar.php?nombre=<*?php echo $row['nombre'];?>" class="campo_tabla">Eliminar</a>-->
         </div>
