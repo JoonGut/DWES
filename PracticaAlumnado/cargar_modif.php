@@ -1,3 +1,4 @@
+//Formulario donde modificaremos registros
 <?php
 include("conexion.php");
 $id = $_GET['id'];
