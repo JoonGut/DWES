@@ -1,6 +1,6 @@
 
 * {
-    margin: 10 px auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -41,7 +41,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: purple;
 }
-container.table {
+.container-tabla {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
@@ -62,8 +62,35 @@ container.table {
     text-align: center;
     display: none;
 }
+.lista-alumnos {
+    list-style: none;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    align-items: center;
+}
 
-.container\.tabla {
+/* encabezado */
+.lista-alumnos .header {
+    background: #0b5bd7;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+}
+
+/* celdas de datos */
+.lista-alumnos{
+    background: #fff;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.container-tabla {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
