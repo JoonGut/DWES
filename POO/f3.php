@@ -1,18 +1,15 @@
 <?php
 require_once 'Monoplaza.php';
 require_once 'F2.php';
-    class F3 extends Monoplaza{
+require_once 'Puntos.php';
+
+    class F3 extends Monoplaza implements Puntos{
         private $nombre_academia;
 
         public function __construct($nombre_academia,$pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos) {
             parent:: __construct($pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos);
             $this->nombre_academia = $nombre_academia;
         }
-        public function __constructorVacio(){
-            parent::__constructorVacio();
-            $this->nombre_academia = "Pure Sport";
-        }
-
         public function setNombreAcademia ($pNombreAcademia){
             $this->nombre_academia = $pNombreAcademia;
         }

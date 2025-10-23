@@ -1,15 +1,12 @@
 <?php
 require_once 'Monoplaza.php';
-    class F1 extends Monoplaza{
+require_once 'Puntos.php';
+    class F1 extends Monoplaza implements Puntos{
         private $nombrePatrocinador;
 
         public function __construct($pNombre, $pNacionalidad, $pNumero, $pEscuderia, $pPuntos,$pPatrocinador) {
             parent::__construct($pNombre, $pNacionalidad, $pNumero, $pEscuderia, $pPuntos);
             $this->nombrePatrocinador = $pPatrocinador;
-        }
-        public function __constructorVacio(){
-            parent::__constructorVacio();
-            $this->nombrePatrocinador = "Red Bull";
         }
         public function setNombrePatrocinador($pPatrocinador){
             $this->nombrePatrocinador = $pPatrocinador;

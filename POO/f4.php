@@ -1,16 +1,13 @@
 <?php
 require_once 'Monoplaza.php';
 require_once 'F3.php';
-    class F4 extends Monoplaza {
+require_once 'Puntos.php';
+    class F4 extends Monoplaza implements Puntos {
         private $pais;
         //CONSTRUCTORES
         public function __construct($pPais,$pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos){
             parent::__construct($pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos); 
             $this->pais = $pPais;
-        }
-        public function __constructorVacio(){
-            parent:: __constructorVacio();
-            $this->pais = "Italia";
         }
         public function setPais($pPais){
             $this->pais = $pPais;

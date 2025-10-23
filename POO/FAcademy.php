@@ -1,17 +1,16 @@
 <?php
 require_once 'Monoplaza.php';
 require_once 'F4.php';
-    class FAcademy extends Monoplaza{
+require_once 'Puntos.php';
+
+    class FAcademy extends Monoplaza implements Puntos{
         private $potencia_max;
 
         public function __construct($pNombre, $pNacionalidad, $pNumero, $pEscuderia, $pPuntos,$pPotencia){
             parent::__construct($pNombre, $pNacionalidad, $pNumero, $pEscuderia, $pPuntos,);
             $this->potencia_max = $pPotencia;
         }
-        public function __constructorVacio(){
-            parent::__constructorVacio();
-            $this->potencia_max = 250;
-        }
+
         public function setPotencia($pPotencia){
             $this->potencia_max  = $pPotencia;
         } 

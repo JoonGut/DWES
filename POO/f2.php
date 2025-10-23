@@ -1,15 +1,12 @@
 <?php
 require_once 'Monoplaza.php';
 require_once 'F1.php';
-    class F2 extends Monoplaza{
+require_once 'Puntos.php';
+    class F2 extends Monoplaza implements Puntos{
         private $puntos_min = false;
         public function __construct($pPuntosMin,$pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos) {
             parent:: __construct($pNombre,$pNacionalidad,$pNumero,$pEscuderia,$pPuntos);
             $this->puntos_min = $pPuntosMin;
-        }
-        public function __constructorVacio(){
-            parent::__constructorVacio();
-            $this->puntos_min = false;
         }
 
         public function setPuntosMin ($pPuntosMin){

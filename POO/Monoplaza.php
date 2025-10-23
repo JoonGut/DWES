@@ -1,5 +1,5 @@
 <?php
-    class Monoplaza {
+    abstract class Monoplaza {
         private $nombre_piloto;
         private $nacionalidad_piloto;
         private $num_monoplaza;
@@ -14,14 +14,6 @@
             $this->num_monoplaza = $pNumero;
             $this->escuderia = $pEscuderia;
             $this->puntos = $pPuntos;
-        }
-
-        public function __constructorVacio(){
-            $this->nombre_piloto = "Jon";
-            $this->nacionalidad_piloto = "ITA";
-            $this->num_monoplaza = 8;
-            $this->escuderia = "Ferrari";
-            $this->puntos = 76;
         }
         
         //GETTERS Y SETTERS
